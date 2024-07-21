@@ -65,5 +65,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    padding: 10px;
   }
 }

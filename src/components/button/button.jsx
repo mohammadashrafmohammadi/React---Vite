@@ -1,37 +1,10 @@
 import PropTypes from "prop-types";
 
-export function Button({ disabled, onClick, label, size, ...rest }) {
-  //   console.log(props);
-
+export function Button({ disabled, label, size, ...rest }) {
   const buttons = {
     sm: (
-      <button
-        className="border border-black"
-        disabled={disabled}
-        onClick={onClick}
-        {...rest}
-      >
-        {label} sm
-      </button>
-    ),
-    md: (
-      <button
-        className="border border-black"
-        disabled={disabled}
-        onClick={onClick}
-        {...rest}
-      >
-        {label} md
-      </button>
-    ),
-    lg: (
-      <button
-        className="border border-black"
-        disabled={disabled}
-        onClick={onClick}
-        {...rest}
-      >
-        {label} lg
+      <button disabled={disabled} className="border border-black" {...rest}>
+        {label}
       </button>
     ),
   };
@@ -40,11 +13,8 @@ export function Button({ disabled, onClick, label, size, ...rest }) {
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  label: PropTypes.string,
   disabled: PropTypes.bool,
+  onClick: PropTypes.func,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
 };
-
-// ! video 4 - 23:30
-// TODO new lecture
