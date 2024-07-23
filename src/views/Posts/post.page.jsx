@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export function Posts() {
   const [isloading, setIsLoading] = useState(false);
   const [posts, setPosts] = useState(false);
-  // console.log(isloading);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +19,7 @@ export function Posts() {
           .then((json) => json);
         setPosts(apiData);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       } finally {
         setIsLoading(false);
       }
