@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function Posts() {
   const [isloading, setIsLoading] = useState(false);
   const [posts, setPosts] = useState(false);
-  console.log(isloading);
+  // console.log(isloading);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +33,9 @@ export function Posts() {
   }
   return (
     <div>
+      <Link to="/" className="underline">
+        Dashboard
+      </Link>
       {posts?.map((post) => (
         <div key={post.id}>{post.title}</div>
       ))}
